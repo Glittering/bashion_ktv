@@ -17,13 +17,12 @@ from django.conf.urls import url
 from django.contrib import admin
 from customer.views import index_customer
 from counter.views import index_counter
-from manager.views import index_manager
 from website.views import index_website
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    # url(r'^counter/',counter.urls),
     url(r'^customer/index/$', index_customer, name='index_customer'),
     url(r'^counter/index/$', index_counter, name='index_counter'),
-    url(r'^manager/index/$', index_manager, name='index_manager'),
     url(r'^website/index/$', index_website, name='index_website'),
 ]
